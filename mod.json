@@ -13,15 +13,51 @@
     "links": {
         "source": "https://github.com/benjamin538/ULTRADASH"
     },
+    "tags": ["enhancement", "gameplay", "offline",  "content"],
     "version": "v1.0.0-alpha",
     "dependencies" : {},
     "settings": {
+        "flash-title": {
+            "type": "title",
+            "name": "Flashes",
+            "description": "Settings of flashes"
+        },
+        "enable-flashes": {
+            "name": "Enable flashes",
+            "description": "Enables or disables flashes",
+            "default": true,
+            "type": "bool"
+        },
+        "flash-opacity": {
+            "name": "Opacity",
+            "description": "Opacity of flash",
+            "min": 0,
+            "max": 100,
+            "default": 50,
+            "control": {
+                "slider": true,
+                "slider-step": 1
+            },
+            "type": "float"
+        },
+        "flashes-length": {
+            "name": "Length",
+            "description": "How long flashes is",
+            "min": 0.1,
+            "max": 1,
+            "default": 0.5,
+            "control": {
+                "slider": true,
+                "slider-step": 0.1
+            },
+            "type": "float"
+        },
         "keybinds-title": {
             "type": "title",
             "name": "Keybinds",
             "description": "Keybinds for mod"
         },
-        "levelInfo": {
+        "level-info": {
             "type": "keybind",
             "name": "Stats",
             "description": "Shows stats of current run",

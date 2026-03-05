@@ -27,6 +27,8 @@ class $modify(GJBaseGameLayer) {
 
 	void destroyObject(GameObject* obj) {
 		GJBaseGameLayer::destroyObject(obj);
+		if (!Mod::get()->getSettingValue<bool>("enable-flashes")) return;
+
 		if (obj->m_objectID == 1322 || obj->m_objectID == 1329 || obj->m_objectID == 142) {
 			log::info("coin");
 			// freeze
@@ -37,12 +39,12 @@ class $modify(GJBaseGameLayer) {
 			bigWhiteFrame->setScale(500.f);
 			bigWhiteFrame->setZOrder(INFINITY);
 			bigWhiteFrame->setID("a-really-big-white-frame");
-			bigWhiteFrame->setOpacity(200);
+			bigWhiteFrame->setOpacity(Mod::get()->getSettingValue<float>("flash-opacity") / 100 * 255);
 			bigWhiteFrame->setPosition(CCDirector::get()->getWinSize()/2);
 			this->m_uiLayer->addChild(bigWhiteFrame);
 
 			auto idk = IDontKnowHowToNameThis::create();
-			CCDirector::get()->getScheduler()->scheduleSelector(schedule_selector(IDontKnowHowToNameThis::resume), idk, 0.000005f, 0, 0.0f, false);
+			CCDirector::get()->getScheduler()->scheduleSelector(schedule_selector(IDontKnowHowToNameThis::resume), idk, Mod::get()->getSettingValue<float>("flashes-length") * 0.00001f, 0, 0.0f, false);
 			bigWhiteFrame->runAction(CCSequence::create(CCDelayTime::create(0.01f), CCRemoveSelf::create(), nullptr));
 		}
 	}

@@ -117,7 +117,7 @@ bool StatsFrame::init(GJBaseGameLayer* layer) {
 	this->scheduleUpdate();
 
 	// listener
-	addEventListener(KeybindSettingPressedEventV3(GEODE_MOD_ID, "levelInfo"), [this, levelTitle, layer](const Keybind& keybind, bool down, bool repeat, double timestamp) {
+	addEventListener(KeybindSettingPressedEventV3(GEODE_MOD_ID, "level-info"), [this, levelTitle, layer](const Keybind& keybind, bool down, bool repeat, double timestamp) {
 		if (down && !layer->m_isEditor) {
 			if (layer->m_level->m_normalPercent == 100) {
 				levelTitle->setString(layer->m_level->m_levelName.c_str());
