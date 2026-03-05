@@ -14,5 +14,19 @@
         "source": "https://github.com/benjamin538/ULTRADASH"
     },
     "version": "v1.0.0-alpha",
-    "dependencies": {"geode.node-ids": ">=v1.20.0"}
+    "dependencies" : {},
+    "settings": {
+        "keybinds-title": {
+            "type": "title",
+            "name": "Keybinds",
+            "description": "Keybinds for mod"
+        },
+        "levelInfo": {
+            "type": "keybind",
+            "name": "Stats",
+            "description": "Shows stats of current run",
+            "default": "Tab",
+            "category": "gameplay"
+        }
+    }
 }
