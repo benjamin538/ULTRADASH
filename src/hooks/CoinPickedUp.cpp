@@ -37,7 +37,7 @@ class $modify(GJBaseGameLayer) {
 
 			auto bigWhiteFrame = CCSprite::create("square.png");
 			bigWhiteFrame->setScale(500.f);
-			bigWhiteFrame->setZOrder(INFINITY);
+			bigWhiteFrame->setZOrder(676767676767676767);
 			bigWhiteFrame->setID("a-really-big-white-frame");
 			bigWhiteFrame->setOpacity(Mod::get()->getSettingValue<float>("flash-opacity") / 100 * 255);
 			bigWhiteFrame->setPosition(CCDirector::get()->getWinSize()/2);

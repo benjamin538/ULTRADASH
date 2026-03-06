@@ -1,6 +1,5 @@
 #include <Geode/Geode.hpp>
 #include <Geode/modify/UILayer.hpp>
-#include <string>
 
 using namespace geode::prelude;
 

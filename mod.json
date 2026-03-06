@@ -20,7 +20,7 @@
         "flash-title": {
             "type": "title",
             "name": "Flashes",
-            "description": "Settings of flashes"
+            "description": "Settings for flashes"
         },
         "enable-flashes": {
             "name": "Enable flashes",
@@ -62,6 +62,13 @@
             "name": "Stats",
             "description": "Shows stats of current run",
             "default": "Tab",
+            "category": "gameplay"
+        },
+        "restart-level": {
+            "type": "keybind",
+            "name": "Restart",
+            "description": "Restart level",
+            "default": "R",
             "category": "gameplay"
         }
     }
