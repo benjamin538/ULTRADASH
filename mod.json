@@ -63,13 +63,6 @@
             "description": "Shows stats of current run",
             "default": "Tab",
             "category": "gameplay"
-        },
-        "restart-level": {
-            "type": "keybind",
-            "name": "Restart",
-            "description": "Restart level",
-            "default": "R",
-            "category": "gameplay"
         }
     }
 }

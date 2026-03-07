@@ -5,18 +5,6 @@
 
 using namespace geode::prelude;
 
-class $modify(PlayLayer) {
-	bool init(GJGameLevel* level, bool useReplay, bool dontCreateObjects) {
-		if (!PlayLayer::init(level, useReplay, dontCreateObjects)) return false;
-		return true;
-	}
-
-	void resetLevel() {
-		if (m_uiLayer->getChildByID("death-screen")) return;
-		PlayLayer::resetLevel();
-	}
-};
-
 class $modify(PlayerObject) {
 	struct Fields {
 		GJBaseGameLayer* m_layer;
