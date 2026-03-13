@@ -6,6 +6,7 @@ Brings ULTRAKILL to Geometry Dash.
 
 - Flashes on coins (like flashes on secrets in original game)
 - Stats tab with info about run (like in original game)
+- Death screen like in ULTRAKILL
 
 ## Want to add something?
 

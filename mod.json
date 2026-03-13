@@ -15,8 +15,39 @@
     },
     "tags": ["enhancement", "gameplay", "offline",  "content"],
     "version": "v1.0.0-alpha",
-    "dependencies" : {},
+    "dependencies" : {
+        "geode.node-ids": ">=1.22.0"
+    },
     "settings": {
+        "health-title": {
+            "type": "title",
+            "name": "Health",
+            "description": "Settings for health"
+        },
+        "enable-health": {
+            "type": "bool",
+            "name": "Enable health",
+            "description": "Enables health which is allows to pass some blocks and spikes",
+            "default": true
+        },
+        "death-title": {
+            "type": "title",
+            "name": "Death screen",
+            "description": "Settings for death screen"
+        },
+        "enable-death-screen": {
+            "type": "bool",
+            "name": "Enable death screen",
+            "default": true,
+            "description": "Enables or  disables death screen"
+        },
+        "disable-in-practice": {
+            "type": "bool",
+            "enable-if": "enable-death-screen",
+            "name": "Disable in practice mode",
+            "default": true,
+            "description": "Disables or enables death screen in practice"
+        },
         "flash-title": {
             "type": "title",
             "name": "Flashes",
@@ -62,6 +93,13 @@
             "name": "Stats",
             "description": "Shows stats of current run",
             "default": "Tab",
+            "category": "gameplay"
+        },
+        "restart-level": {
+            "type": "keybind",
+            "name": "Restart",
+            "description": "Restarts the level",
+            "default": "R",
             "category": "gameplay"
         }
     }
